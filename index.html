@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta http-equiv="refresh" content="10" >
+</head>
+<body>
+
+    <form id="myForm" action="./recibirMsg.php" method="post">
+
+        <input type="text" id="codigo" name="codigo" autofocus ><br><br>
+        <button type="submit"> Enviar</button>
+    </form>
+
+    <script>
+            document.getElementById("myForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Evita el envío del formulario por defecto
+
+                var formData = new FormData(this); // Obtiene los datos del formulario
+
+
+                var xhr = new XMLHttpRequest(); // Crea una instancia de XMLHttpRequest
+                xhr.open("POST", "http://34.229.252.56:1880/test"); // Especifica la URL de destino
+                xhr.setRequestHeader("Content-Type", "text/xml"); // Establece el encabezado Content-Type a XML
+
+                var xmlData = "<formulario>"; // Inicia el elemento raíz del XML
+                for (var pair of formData.entries()) {
+                    xmlData += "<" + pair[0] + ">" + pair[1] + "</" + pair[0] + ">"; // Crea elementos XML para cada campo del formulario
+                }
+                xmlData += "</formulario>"; // Cierra el elemento raíz del XML
+
+                xhr.send(xmlData); // Envía la solicitud con los datos en formato XML
+            });
+    </script>
+
+    
+    
+</body>
+</html>
