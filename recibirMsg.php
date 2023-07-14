@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Aquí puedes hacer lo que necesites con la variable $codigo
   }
 
-  echo $codigo;
+ print_r($codigo);
 
 
 ?>
