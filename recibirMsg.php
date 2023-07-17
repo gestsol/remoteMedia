@@ -6,11 +6,11 @@ $xml = simplexml_load_string($xmlData); // Convierte los datos XML a un objeto S
 
 print_r($xml);
 
-//$codigo=  $xml->codigo;
+$codigo=  $xml->codigo;
 
 include "./com/com.php" ;
 
-$QRY="UPDATE `codigos` SET `codigo` = '1234' WHERE `codigos`.`id` = 1; ";
+$QRY="UPDATE `codigos` SET `codigo` = '$codigo' WHERE `codigos`.`id` = 1; ";
 
 echo
 $res= mysqli_query($mysqli,$QRY);
