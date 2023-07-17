@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <meta http-equiv="refresh" content="10" >
+    <!-- <meta http-equiv="refresh" content="10" > -->
 </head>
 <body>
 
@@ -22,7 +22,7 @@
 
 
                 var xhr = new XMLHttpRequest(); // Crea una instancia de XMLHttpRequest
-                xhr.open("POST", "http://34.229.252.56:1880/test"); // Especifica la URL de destino
+                xhr.open("POST", "./recibirMsg.php"); // Especifica la URL de destino
                 xhr.setRequestHeader("Content-Type", "text/xml"); // Establece el encabezado Content-Type a XML
 
                 var xmlData = "<formulario>"; // Inicia el elemento raíz del XML

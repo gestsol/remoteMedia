@@ -12,7 +12,7 @@ $carga_xml = simplexml_load_string($xml);
 
 print_r($carga_xml);
 
-echo $xml;
+echo" el codigo es  $xml ";
 
 
 

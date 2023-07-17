@@ -1,11 +1,17 @@
 <?php 
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $codigo = $_POST['codigo'];
-    // Aquí puedes hacer lo que necesites con la variable $codigo
-  }
+$xmlData = file_get_contents('php://input'); // Obtiene los datos enviados en formato XML
 
- print_r($codigo);
+$xml = simplexml_load_string($xmlData); // Convierte los datos XML a un objeto SimpleXMLElement
 
+print_r($xml);
 
-?>
+//$codigo=  $xml->codigo;
+
+include "./com/com.php" ;
+
+$QRY="UPDATE `codigos` SET `codigo` = '1234' WHERE `codigos`.`id` = 1; ";
+
+$res= mysqli_query($mysqli,$QRY);
+
+?> 
