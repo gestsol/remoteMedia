@@ -12,11 +12,12 @@ $data=mysqli_fetch_array($res);
 $codigo=$data['codigo'];
 
 $xml="<?xml version='1.0'  encoding='UTF-8'?>
-<nodo_padre>
-   <CODIGO>
-      <valor>$codigo</valor>
-   </CODIGO>  
-</nodo_padre>";
+<content>
+  <text>
+    <content>$codigo</content>
+    <duration>5</duration>
+  </text>
+</content>
 
 $carga_xml = simplexml_load_string($xml);
 
