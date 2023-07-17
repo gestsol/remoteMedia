@@ -17,7 +17,7 @@ $xml="<?xml version='1.0'  encoding='UTF-8'?>
     <content>$codigo</content>
     <duration>5</duration>
   </text>
-</content>
+</content>";
 
 $carga_xml = simplexml_load_string($xml);
 
