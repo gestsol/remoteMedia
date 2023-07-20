@@ -1,5 +1,5 @@
 <?php 
-include "/com/com.php" ;
+include "./com/com.php" ;
 
 $QRY="select * from codigos";
 
