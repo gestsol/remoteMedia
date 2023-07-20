@@ -14,9 +14,9 @@ $codigo=$data['codigo'];
 
 
 
-header("Content-type: text/xml");
-echo "<?xml version='1.0' encoding='UTF-8'?>";
-echo "<note>";
-echo "<message>$codigo</message>";
-echo "</note>";
+// header("Content-type: text/xml");
+// echo "<?xml version='1.0' encoding='UTF-8'?>";
+// echo "<note>";
+// echo "<message>$codigo</message>";
+// echo "</note>";
 ?>
