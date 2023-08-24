@@ -17,14 +17,6 @@ echo "<note>";
 echo "<message>$codigo</message>";
 echo "</note>";
 
-sleep(5);
-
-header("Content-type: text/xml");
-echo "<?xml version='1.0' encoding='UTF-8'?>";
-echo "<note>";
-echo "<message>0</message>";
-echo "</note>";
-
 
 
 ?>
