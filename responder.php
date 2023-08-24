@@ -17,6 +17,14 @@ echo "<note>";
 echo "<message>$codigo</message>";
 echo "</note>";
 
+sleep(5);
+
+echo "<note>";
+echo "<message>0</message>";
+echo "</note>";
+
+
+
 
 
 ?>
