@@ -1,10 +1,10 @@
 <?php
 // Conexión a la base de datos
-$conexion = mysqli_connect('localhost', 'usuario', 'contraseña', 'RSS');
+$conexion = mysqli_connect('localhost', 'wit', 'wit2023', 'RSS');
 
 // Consulta para obtener los mensajes desde la base de datos
 $query = "SELECT * FROM mensajes";
-echo
+
 $resultado = mysqli_query($conexion, $query);
 
 // Creación del objeto XML para el feed RSS
