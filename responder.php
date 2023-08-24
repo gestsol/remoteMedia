@@ -17,6 +17,10 @@ echo "<note>";
 echo "<message>$codigo</message>";
 echo "</note>";
 
+sleep(5);
+
+$QRY="UPDATE `codigos` SET `codigo` = 0 WHERE `codigos`.`id` = 1; ";
+$res= mysqli_query($mysqli,$QRY);
 
 
 
