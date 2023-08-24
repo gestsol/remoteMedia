@@ -4,6 +4,7 @@ $conexion = mysqli_connect('localhost', 'usuario', 'contraseña', 'RSS');
 
 // Consulta para obtener los mensajes desde la base de datos
 $query = "SELECT * FROM mensajes";
+echo
 $resultado = mysqli_query($conexion, $query);
 
 // Creación del objeto XML para el feed RSS
@@ -14,7 +15,7 @@ $feed->addChild('channel');
 while ($fila = mysqli_fetch_assoc($resultado)) {
     $item = $feed->channel->addChild('item');
     $item->addChild('title', $fila['titulo']);
-    $item->addChild('description', $fila['descripcion']);
+    $item->addChild('description', $fila['']);
     $item->addChild('pubDate', date('r', strtotime($fila['fecha'])));
 }
 
